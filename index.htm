@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="shortcut icon" href="https://github.com/vuejs.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <style>
+        .div{
+            display: flex;
+            justify-content:space-evenly;
+            padding-top: 50px;
+        }
+        .buttons{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            margin: 10px;
+        }
+        .start_button{
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+
+         <div class="div">
+            <h1 >Monster : {{MonsterPoint}}</h1>   
+            <h1>Player   : {{PlayerPoint}}</h1> 
+         </div>  
+
+         <div class="start_button">
+             <button @click="show" class="btn btn-info start">Start</button>
+         </div>
+         <div class="buttons" style="display: none;">
+             <button class="btn btn-success attack_btn" @click="attack">Attack</button>
+             <button class="btn btn-danger violent_attack_btn" @click="Violent_attack">Violent attack</button>
+             <button class="btn btn-primary health_btn" @click="Increase_Health " >Health Boost</button>
+             <button class="btn btn-warning" @click="exit">Exit</button>
+         </div>
+    </div>
+    
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
